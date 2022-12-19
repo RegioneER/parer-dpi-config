@@ -25,20 +25,6 @@
         <final.war.name>dpi</final.war.name>
     </properties>
 
-
-    <profiles>
-        <profile>
-            <id>svil</id>
-            <properties>
-                <target.env>svil</target.env>
-            </properties>
-        </profile>
-        <profile>
-            <id>full-build</id>
-        </profile>
-    </profiles>
-
-
     <build>
         <resources>
             <resource>
