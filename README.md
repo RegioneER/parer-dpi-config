@@ -2,6 +2,9 @@
 
 Progetto relativo alle generazione delle cofigurazioni standard suddivise per ambiente ed installazione dell'applicazione [DPI](https://gitlab.ente.regione.emr.it/parer/dpi). <br/><br/>
 
+## Introduzione
+
+Il seguente progetto viene creato per esternalizzare le configurazioni, per singolo ambiente, dell'applicazione DPI, nello specifico il progetto viene creato a partire dalla configurazioni alla versione **2.6.0** del DPI che sono quindi le ultime ad essere presenti all'interno dell'applicativo stesso.
 
 ## Guida alle configurazioni  
 
