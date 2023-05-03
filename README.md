@@ -10,15 +10,21 @@ Il seguente progetto viene creato per esternalizzare le configurazioni, per sing
 
 Nella directory [conf](conf), vengono generate automaticamente dal modello CI/CD, le configurazioni per le diverenze installazioni di DPI per ogni ambiente, che saranno predisposte opportunamente secondo [guida ufficiale](https://parermine.regione.emilia-romagna.it/projects/parer/wiki/DPI_installazione_tomcat9).
 
-## Rilascio delle configurazioni  
+## Versionamento dpi-config e dpi  
 
-Il rilascio delle configurazioni prevede, come precondizione **fondamentale**, un nuovo rilascio dell'applicativo [DPI](https://gitlab.ente.regione.emr.it/parer/dpi) questo comporta la modifica del progetto [DPI Config](https://gitlab.ente.regione.emr.it/parer/dpi-config) come da istruzioni (vedi paragrafo successivo) e al termine delle opportune modifiche, si dovrà creare un **git tag** con la seguente logica ossia, un nuovo tag dovrà **necessariamente** riportare **da quale versione del DPI le configurazioni hanno effetto**. Le modifiche delle configurazioni infatti dovranno tracciare da quale versione applicativa del DPI saranno valide in quanto, non si prevede alcuna retrocompatibilità (o si può garantire la "robustezza" all'indietro) qualora vengano modificate una o più configurazioni. 
+Il versionamento del progetto **dpi-config** segue direttamente quello dell'applicazione [DPI](https://gitlab.ente.regione.emr.it/parer/dpi), ossia, ad ogni nuovo versionamento di quest'ultimo seguirà anche il versionamento di questo progetto (esempio se creata la versione 3.0.0 di dpi si dovrà anche creare la relativa versione di dpi-config 3.0.0 indipendentemente se quest'ultimo è stato modificato o meno). 
+Questa gestione delle versioni è utile per associare ad ogni nuova versione applicativa di dpi anche le relative configurazioni.
+In caso di **sola modifica di dpi-config** non seguita quindi da modifiche applicative su **dpi**, si stabilisce la generazione di una nuova versione di **dpi-config** applicando un quarto numero alla versione da creare (esempio dpi alla versione 3.0.0 e dpi-config 3.0.0, in caso di sola modifica a dpi-config si crea la versione 3.0.0**.1**).
 
-Esempio
+
+Esempio 1 (modifica a dpi che segue il versionamento di dpi-config)
 
 Sul tag [2.6.0](https://gitlab.ente.regione.emr.it/parer/dpi-config/-/tags/2.6.0) le configurazioni hanno effettuato a **partire** dalla versione 2.6.0 del DPI e da quelle successive, le precedenti versioni avranno quindi configurazioni diverse e certamente non compatibili con quelle rilasciate.
 
-La creazione del git tag su questo progetto è, per il momento, **manuale** è quindi importante osservare delle convenzioni ben specifiche, naturalmente l'approccio più semplifice, prevece che il nome del tag riporti esattamente la release applicativa del DPI con la naming convention: X.Y.Z. 
+Esempio 2 (modifica esclusiva a dpi-config)
+
+Si crea la versione **2.6.0.1** di dpi-config che quindi è relativa alla versione **2.6.0** di dpi ma si evidenziano le sole modifiche alle configurazioni compatibili a partire da questa versione.
+
 
 ## Modifica delle configurazioni  
 
