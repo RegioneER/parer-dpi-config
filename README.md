@@ -14,7 +14,7 @@ Nella directory [conf](conf), vengono generate automaticamente dal modello CI/CD
 
 Il versionamento del progetto **dpi-config** segue direttamente quello dell'applicazione [DPI](https://gitlab.ente.regione.emr.it/parer/dpi), ossia, ad ogni nuovo versionamento di quest'ultimo seguirà anche il versionamento di questo progetto (esempio se creata la versione 3.0.0 di dpi si dovrà anche creare la relativa versione di dpi-config 3.0.0 indipendentemente se quest'ultimo è stato modificato o meno). 
 Questa gestione delle versioni è utile per associare ad ogni nuova versione applicativa di dpi anche le relative configurazioni.
-In caso di **sola modifica di dpi-config** non seguita quindi da modifiche applicative su **dpi**, si stabilisce la generazione di una nuova versione di **dpi-config** applicando un quarto numero alla versione da creare (esempio dpi alla versione 3.0.0 e dpi-config 3.0.0, in caso di sola modifica a dpi-config si crea la versione 3.0.0**.1**).
+In caso di **sola modifica di dpi-config** non seguita quindi da modifiche applicative su **dpi**, si stabilisce la generazione di una nuova versione di **dpi-config** applicando un quarto numero alla versione da creare (esempio dpi alla versione 3.0.0 e dpi-config 3.0.0, in caso di sola modifica a dpi-config si crea la versione 3.0.0.**1**).
 
 
 Esempio 1 (modifica a dpi che segue il versionamento di dpi-config)
