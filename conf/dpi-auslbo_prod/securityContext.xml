@@ -10,7 +10,7 @@
     <!-- samlRelayState DEVE essere definito prima dell'import che lo usa altrimenti non funziona nulla! -->
     <!-- Serve per far funzionare l'integrazione con FEDERA -->
     <bean id="spEntityId" class="java.lang.String">
-        <constructor-arg value="https://vparer1.internal.ausl.bologna.it/dpi"/>
+        <constructor-arg value="https://vparer-lep.internal.ausl.bologna.it/dpi"/>
     </bean>
     <!-- Estrae dall'entityId la parte dell'url del server e della porta escludendo l'ultimo slash -->
     <bean id="serverUrl" class="java.lang.String">
@@ -95,7 +95,7 @@
                     </constructor-arg>
                     <constructor-arg>
                         <map>
-                            <entry key="https://vparer1.internal.ausl.bologna.it/dpi">
+                            <entry key="https://vparer-lep.internal.ausl.bologna.it/dpi">
                                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
                                     <property name="local" value="true" />
                                     <property name="alias" value="dpi" />
@@ -119,7 +119,7 @@
             </list>
         </constructor-arg>
         <!-- OPTIONAL used when one of the metadata files contains information about this service provider -->
-        <property name="hostedSPName" value="https://vparer1.internal.ausl.bologna.it/dpi" />
+        <property name="hostedSPName" value="https://vparer-lep.internal.ausl.bologna.it/dpi" />
         <!-- OPTIONAL property: can tell the system which IDP should be used for authenticating user by default. -->
         <property name="defaultIDP" value="https://sso-parer.regione.emilia-romagna.it/auth/realms/Parer" />
         <!-- Intervallo di refresh dei metadati -->
