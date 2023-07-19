@@ -13,7 +13,7 @@
     </parent>
 
     <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/dpi-config.git</developerConnection>
+        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/tomcat/dpi-config.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <properties>
