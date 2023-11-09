@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>dpi-config</artifactId>
-    <version>2.8.1-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dpi Config</name>
     <description>Progetto DPI Config</description>
@@ -9,7 +9,7 @@
     <parent>
         <groupId>it.eng.parer</groupId>
         <artifactId>parer-pom</artifactId>
-        <version>4.1.0</version>
+        <version>4.2.1-mev_30349_dicomTls-SNAPSHOT</version>
     </parent>
 
     <scm>
@@ -71,6 +71,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -111,6 +113,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -151,6 +155,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -191,6 +197,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -231,6 +239,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -271,6 +281,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -311,6 +323,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -351,6 +365,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -391,6 +407,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -431,6 +449,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -471,6 +491,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -511,6 +533,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -553,6 +577,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -595,6 +621,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -636,6 +664,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -676,6 +706,8 @@
                                         <exclude>**/dpi.properties</exclude>
                                         <exclude>**/securityContext.xml</exclude>
                                         <exclude>**/jks/</exclude>
+                                        <exclude>**/keytool.properties</exclude>
+                                        <exclude>**/dicom_tls/</exclude>
                                     </excludes>
                                 </resource>
                                 <resource>
@@ -694,7 +726,166 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!-- MEV#30394 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>read-project-properties</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>src/main/resources/keytool.properties</file>
+                            </files>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>keytool-maven-plugin</artifactId>
+                <executions>       
+                    <execution>
+                        <id>keystore-svil</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>generateKeyPair</goal>
+                            <goal>exportCertificate</goal>
+                        </goals>
+                        <configuration>            
+                            <keystore>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.generateKeyPair.keystore}</keystore>
+                            <storepass>${dpi-svil.keytool.generateKeyPair.storepass}</storepass>
+                            <storetype>${dpi-svil.keytool.generateKeyPair.storetype}</storetype>
+                            <keypass>${dpi-svil.keytool.generateKeyPair.keypass}</keypass>
+                            <alias>${dpi-svil.keytool.generateKeyPair.alias}</alias>
+                            <dname>${dpi-svil.keytool.generateKeyPair.dname}</dname>
+                            <sigalg>${dpi-svil.keytool.generateKeyPair.sigalg}</sigalg>
+                            <validity>${dpi-svil.keytool.generateKeyPair.validity}</validity>
+                            <keyalg>${dpi-svil.keytool.generateKeyPair.keyalg}</keyalg>
+                            <keysize>${dpi-svil.keytool.generateKeyPair.keysize}</keysize>
+                            <file>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.exportCertificate.file}</file>
+                            <rfc>${dpi-svil.keytool.exportCertificate.rfc}</rfc>
+                            <verbose>${dpi-svil.keytool.generateKeyPair.verbose}</verbose> 
+                            <noprompt>${dpi-svil.keytool.generateKeyPair.noprompt}</noprompt>         
+                        </configuration>
+                    </execution>       
+                    <execution>
+                        <id>truststore-svil</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>importCertificate</goal>
+                        </goals>
+                        <configuration>
+                            <keystore>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.importCertificate.keystore}</keystore>
+                            <storepass>${dpi-svil.keytool.importCertificate.storepass}</storepass>
+                            <storetype>${dpi-svil.keytool.importCertificate.storetype}</storetype>
+                            <keypass>${dpi-svil.keytool.importCertificate.keypass}</keypass>
+                            <alias>${dpi-svil.keytool.importCertificate.alias}</alias>
+                            <file>src/main/resources/dicom_tls/svil/${dpi-svil.keytool.importCertificate.file}</file>
+                            <trustcacerts>${dpi-svil.keytool.importCertificate.trustcacerts}</trustcacerts>
+                            <verbose>${dpi-svil.keytool.importCertificate.verbose}</verbose> 
+                            <noprompt>${dpi-svil.keytool.importCertificate.noprompt}</noprompt>         
+                        </configuration> 
+                    </execution>
+                    
+                    <execution>
+                        <id>keystore-snap</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>generateKeyPair</goal>
+                            <goal>exportCertificate</goal>
+                        </goals>
+                        <configuration>            
+                            <keystore>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.generateKeyPair.keystore}</keystore>
+                            <storepass>${dpi-snap.keytool.generateKeyPair.storepass}</storepass>
+                            <storetype>${dpi-snap.keytool.generateKeyPair.storetype}</storetype>
+                            <keypass>${dpi-snap.keytool.generateKeyPair.keypass}</keypass>
+                            <alias>${dpi-snap.keytool.generateKeyPair.alias}</alias>
+                            <dname>${dpi-snap.keytool.generateKeyPair.dname}</dname>
+                            <sigalg>${dpi-snap.keytool.generateKeyPair.sigalg}</sigalg>
+                            <validity>${dpi-snap.keytool.generateKeyPair.validity}</validity>
+                            <keyalg>${dpi-snap.keytool.generateKeyPair.keyalg}</keyalg>
+                            <keysize>${dpi-snap.keytool.generateKeyPair.keysize}</keysize>
+                            <file>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.exportCertificate.file}</file>
+                            <rfc>${dpi-snap.keytool.exportCertificate.rfc}</rfc>
+                            <verbose>${dpi-snap.keytool.generateKeyPair.verbose}</verbose> 
+                            <noprompt>${dpi-snap.keytool.generateKeyPair.noprompt}</noprompt>         
+                        </configuration>
+                    </execution>       
+                    <execution>
+                        <id>truststore-snap</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>importCertificate</goal>
+                        </goals>
+                        <configuration>
+                            <keystore>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.importCertificate.keystore}</keystore>
+                            <storepass>${dpi-snap.keytool.importCertificate.storepass}</storepass>
+                            <storetype>${dpi-snap.keytool.importCertificate.storetype}</storetype>
+                            <keypass>${dpi-snap.keytool.importCertificate.keypass}</keypass>
+                            <alias>${dpi-snap.keytool.importCertificate.alias}</alias>
+                            <file>src/main/resources/dicom_tls/snap/${dpi-snap.keytool.importCertificate.file}</file>
+                            <trustcacerts>${dpi-snap.keytool.importCertificate.trustcacerts}</trustcacerts>
+                            <verbose>${dpi-snap.keytool.importCertificate.verbose}</verbose> 
+                            <noprompt>${dpi-snap.keytool.importCertificate.noprompt}</noprompt>         
+                        </configuration> 
+                    </execution>
+                    
+                    <execution>
+                        <id>keystore-auslbo_prod</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>generateKeyPair</goal>
+                            <goal>exportCertificate</goal>
+                        </goals>
+                        <configuration>            
+                            <keystore>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.generateKeyPair.keystore}</keystore>
+                            <storepass>${dpi-auslbo_prod.keytool.generateKeyPair.storepass}</storepass>
+                            <storetype>${dpi-auslbo_prod.keytool.generateKeyPair.storetype}</storetype>
+                            <keypass>${dpi-auslbo_prod.keytool.generateKeyPair.keypass}</keypass>
+                            <alias>${dpi-auslbo_prod.keytool.generateKeyPair.alias}</alias>
+                            <dname>${dpi-auslbo_prod.keytool.generateKeyPair.dname}</dname>
+                            <sigalg>${dpi-auslbo_prod.keytool.generateKeyPair.sigalg}</sigalg>
+                            <validity>${dpi-auslbo_prod.keytool.generateKeyPair.validity}</validity>
+                            <keyalg>${dpi-auslbo_prod.keytool.generateKeyPair.keyalg}</keyalg>
+                            <keysize>${dpi-auslbo_prod.keytool.generateKeyPair.keysize}</keysize>
+                            <file>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.exportCertificate.file}</file>
+                            <rfc>${dpi-auslbo_prod.keytool.exportCertificate.rfc}</rfc>
+                            <verbose>${dpi-auslbo_prod.keytool.generateKeyPair.verbose}</verbose> 
+                            <noprompt>${dpi-auslbo_prod.keytool.generateKeyPair.noprompt}</noprompt>         
+                        </configuration>
+                    </execution>      
+                    <execution>
+                        <id>truststore-auslbo_prod</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>importCertificate</goal>
+                        </goals>
+                        <configuration>
+                            <keystore>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.importCertificate.keystore}</keystore>
+                            <storepass>${dpi-auslbo_prod.keytool.importCertificate.storepass}</storepass>
+                            <storetype>${dpi-auslbo_prod.keytool.importCertificate.storetype}</storetype>
+                            <keypass>${dpi-auslbo_prod.keytool.importCertificate.keypass}</keypass>
+                            <alias>${dpi-auslbo_prod.keytool.importCertificate.alias}</alias>
+                            <file>src/main/resources/dicom_tls/auslbo_prod/${dpi-auslbo_prod.keytool.importCertificate.file}</file>
+                            <trustcacerts>${dpi-auslbo_prod.keytool.importCertificate.trustcacerts}</trustcacerts>
+                            <verbose>${dpi-auslbo_prod.keytool.importCertificate.verbose}</verbose> 
+                            <noprompt>${dpi-auslbo_prod.keytool.importCertificate.noprompt}</noprompt>         
+                        </configuration> 
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- end MEV#30394 -->
         </plugins>
     </build>
 
