@@ -5,7 +5,7 @@ Fonte template redazione documento:  https://www.makeareadme.com/.
 
 # Descrizione
 
-Progetto relativo alle generazione delle cofigurazioni standard suddivise per ambiente ed installazione dell'applicazione [DPI](https://gitlab.ente.regione.emr.it/parer/dpi). <br/><br/>
+Progetto relativo alle generazione delle cofigurazioni standard suddivise per ambiente ed installazione dell'applicazione DPI (Digital Preservation Interface).<br/><br/>
 
 # Installazione
 

@@ -13,9 +13,25 @@
     </parent>
 
     <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/tomcat/dpi-config.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-dpi.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+
+    <distributionManagement>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/RegioneER/parer-dpi</url>
+        </repository>      
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>            
+        </repository>            
+	</repositories>
+   
+
     <properties>
         <maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
