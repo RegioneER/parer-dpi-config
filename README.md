@@ -1,8 +1,18 @@
 # DPI Config
 
+Fonte template redazione documento:  https://www.makeareadme.com/.
+
+
+# Descrizione
+
 Progetto relativo alle generazione delle cofigurazioni standard suddivise per ambiente ed installazione dell'applicazione [DPI](https://gitlab.ente.regione.emr.it/parer/dpi). <br/><br/>
 
-## Introduzione
+# Installazione
+
+??? TODO
+
+# Utilizzo
+
 
 Il seguente progetto viene creato per esternalizzare le configurazioni, per singolo ambiente, dell'applicazione DPI, nello specifico il progetto viene creato a partire dalla configurazioni alla versione **2.6.0** del DPI che sono quindi le ultime ad essere presenti all'interno dell'applicativo stesso.
 
@@ -29,3 +39,20 @@ Si crea la versione **2.6.0.1** di dpi-config che quindi è relativa alla versio
 ## Modifica delle configurazioni  
 
 La directory su cui agire è [filters](filters) su cui sono presenti i file statici con relativi placeholder, trattandosi di un progetto maven che utilizza l'apposito plugin, è necessario eventualmente agire sui file in cui è già presente una logica di "filtro" e, nell'eventualità le future evolutive dell'applicazione DPI impongano nuovi file, di modificare anche il pom.xml di progetto. Per la generazione dell'artifact finale è stata predisposta una apposista implementazione su pipeline Gitlab che produce il "pacchetto" attraverso il goal maven "package".
+
+
+# Supporto
+
+Mantainer del progetto è [Engineering Ingegneria Informatica S.p.A.](https://www.eng.it/).
+
+# Contributi
+
+Se interessati a crontribuire alla crescita del progetto potete scrivere all'indirizzo email <a href="mailto:areasviluppoparer@regione.emilia-romagna.it">areasviluppoparer@regione.emilia-romagna.it</a>.
+
+# Credits
+
+Progetto di proprietà di [Regione Emilia-Romagna](https://www.regione.emilia-romagna.it/) sviluppato a cura di [Engineering Ingegneria Informatica S.p.A.](https://www.eng.it/).
+
+# Licenza
+
+Questo progetto è rilasciato sotto licenza GNU Affero General Public License v3.0 or later ([LICENSE.txt](LICENSE.txt)).
