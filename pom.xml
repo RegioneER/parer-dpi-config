@@ -197,7 +197,7 @@
                             <storetype>${dpi-example_test.keytool.importCertificate.storetype}</storetype>
                             <keypass>${dpi-example_test.keytool.importCertificate.keypass}</keypass>
                             <alias>${dpi-example_test.keytool.importCertificate.alias}</alias>
-                            <file>src/main/resources/dicom_tls/example_test/${dpi-example_test.keytool.importCertificate.file}</file>
+                            <file>src/main/resources/dicom_tls/test/${dpi-example_test.keytool.importCertificate.file}</file>
                             <trustcacerts>${dpi-example_test.keytool.importCertificate.trustcacerts}</trustcacerts>
                             <verbose>${dpi-example_test.keytool.importCertificate.verbose}</verbose>
                             <noprompt>${dpi-example_test.keytool.importCertificate.noprompt}</noprompt>
@@ -243,7 +243,7 @@
                             <storetype>${dpi-example_prod.keytool.importCertificate.storetype}</storetype>
                             <keypass>${dpi-example_prod.keytool.importCertificate.keypass}</keypass>
                             <alias>${dpi-example_prod.keytool.importCertificate.alias}</alias>
-                            <file>src/main/resources/dicom_tls/example_prod/${dpi-example_prod.keytool.importCertificate.file}</file>
+                            <file>src/main/resources/dicom_tls/prod/${dpi-example_prod.keytool.importCertificate.file}</file>
                             <trustcacerts>${dpi-example_prod.keytool.importCertificate.trustcacerts}</trustcacerts>
                             <verbose>${dpi-example_prod.keytool.importCertificate.verbose}</verbose>
                             <noprompt>${dpi-example_prod.keytool.importCertificate.noprompt}</noprompt>
