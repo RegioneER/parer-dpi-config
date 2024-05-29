@@ -1,0 +1,18 @@
+# template base
+include:
+  - project: 'parer/pipeline-template'
+    ref: v1.0
+    file: 
+      - '/templates/dind/Default.gitlab-ci.yml'
+      - '/templates/dind/Package.gitlab-ci.yml'
+      - '/templates/dind/Release.gitlab-ci.yml'
+      - '/templates/dind/Docs.gitlab-ci.yml'
+      - '/templates/dind/Update.gitlab-ci.yml'
+      - '/templates/dind/Badge.gitlab-ci.yml'       
+
+stages:
+  - package
+  - docs
+  - release
+  - update
+  - badge

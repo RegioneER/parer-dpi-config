@@ -16,22 +16,6 @@
         <developerConnection>scm:git:https://github.com/RegioneER/parer-dpi.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-
-    <distributionManagement>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/RegioneER/parer-dpi</url>
-        </repository>      
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>            
-        </repository>            
-	</repositories>
-   
-
     <properties>
         <maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -64,55 +48,13 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>copy-resources-svil</id>
+                        <id>copy-resources-example-dicom_prod</id>
                         <phase>process-resources</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-svil</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/svil/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/svil/dpi-svil.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-auslrn-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslrn_prod</outputDirectory>
+                            <outputDirectory>${basedir}/conf/dpi-example_dicom_prod</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>src/main/resources</directory>
@@ -142,570 +84,19 @@
                                 </resource>
                             </resources>
                             <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslrn_prod/dpi-auslrn.properties</filter>
+                                <filter>${basedir}/filters/template.properties</filter>
+                                <filter>${basedir}/filters/example_dicom_prod/dpi-example_dicom.properties</filter>
                             </filters>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>copy-resources-auslromagnace-dicom_prod</id>
+                        <id>copy-resources-example-dicom_test</id>
                         <phase>process-resources</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslromagnace_dicom_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslromagnace_dicom_prod/dpi-auslromagnace_dicom.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-auslromagnafo-dicom_prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslromagnafo_dicom_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslromagnafo_dicom_prod/dpi-auslromagnafo_dicom.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-auslromagnafo-dicom_pre</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslromagnafo_dicom_pre</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/pre/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslromagnafo_dicom_pre/dpi-auslromagnafo_dicom.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-irstmeldola_pre</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-irstmeldola_pre</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/pre/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/irstmeldola_pre/dpi-irstmeldola.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-aobo-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-aobo_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/aobo_prod/dpi-aobo.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-auslbo-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslbo_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslbo_prod/dpi-auslbo.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-aomo-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-aomo_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/aomo_prod/dpi-aomo.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-auslce-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslce_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslce_prod/dpi-auslce.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-ausl-imola-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-auslimola_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/auslimola_prod/dpi-auslimola.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-ior-rizzoli-prod</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-iorrizzoli_prod</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/prod/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/iorrizzoli_prod/dpi-iorrizzoli.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-
-
-                    <execution>
-                        <id>copy-resources-aopr-pre</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-aopr_pre</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/pre/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/aopr_pre/dpi-aopr.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-
-
-                    <execution>
-                        <id>copy-resources-aslcn1_pre</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-aslcn1_pre</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/pre/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/aslcn1_pre/dpi-aslcn1.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>copy-resources-snap</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-snap</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources</directory>
-                                    <filtering>true</filtering>
-                                    <includes>
-                                        <include>**/dpi.properties</include>
-                                        <include>**/securityContext.xml</include>
-                                    </includes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources</directory>
-                                    <excludes>
-                                        <exclude>**/dpi.properties</exclude>
-                                        <exclude>**/securityContext.xml</exclude>
-                                        <exclude>**/jks/</exclude>
-                                        <exclude>**/keytool.properties</exclude>
-                                        <exclude>**/dicom_tls/</exclude>
-                                    </excludes>
-                                </resource>
-                                <resource>
-                                    <filtering>false</filtering>
-                                    <directory>src/main/resources/jks/svil/</directory>
-                                    <includes>
-                                        <include>**</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                            <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/snap/dpi-snap.properties</filter>
-                            </filters>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-resources-parer-test</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/conf/dpi-parer_test</outputDirectory>
+                            <outputDirectory>${basedir}/conf/dpi-example_dicom_test</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>src/main/resources</directory>
@@ -735,11 +126,12 @@
                                 </resource>
                             </resources>
                             <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
-                                <filter>${basedir}/filters/parer_test/dpi-parer.properties</filter>
+                                <filter>${basedir}/filters/template.properties</filter>
+                                <filter>${basedir}/filters/example_dicom_test/dpi-example_dicom.properties</filter>
                             </filters>
                         </configuration>
                     </execution>
+
                 </executions>
             </plugin>
             <!-- MEV#30394 -->
@@ -764,56 +156,9 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>keytool-maven-plugin</artifactId>
-                <executions>       
+                <executions>
                     <execution>
-                        <id>keystore-svil</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>generateKeyPair</goal>
-                            <goal>exportCertificate</goal>
-                        </goals>
-                        <configuration>           
-                            <skip>${dpi-svil.keytool.skip}</skip>        
-                            <keystore>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.generateKeyPair.keystore}</keystore>
-                            <storepass>${dpi-svil.keytool.generateKeyPair.storepass}</storepass>
-                            <storetype>${dpi-svil.keytool.generateKeyPair.storetype}</storetype>
-                            <keypass>${dpi-svil.keytool.generateKeyPair.keypass}</keypass>
-                            <alias>${dpi-svil.keytool.generateKeyPair.alias}</alias>
-                            <dname>${dpi-svil.keytool.generateKeyPair.dname}</dname>
-                            <sigalg>${dpi-svil.keytool.generateKeyPair.sigalg}</sigalg>
-                            <validity>${dpi-svil.keytool.generateKeyPair.validity}</validity>
-                            <keyalg>${dpi-svil.keytool.generateKeyPair.keyalg}</keyalg>
-                            <keysize>${dpi-svil.keytool.generateKeyPair.keysize}</keysize>
-                            <file>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.exportCertificate.file}</file>
-                            <rfc>${dpi-svil.keytool.exportCertificate.rfc}</rfc>
-                            <verbose>${dpi-svil.keytool.generateKeyPair.verbose}</verbose> 
-                            <noprompt>${dpi-svil.keytool.generateKeyPair.noprompt}</noprompt> 
-                        </configuration>
-                    </execution>       
-                    <execution>
-                        <id>truststore-svil</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>importCertificate</goal>
-                        </goals>
-                        <configuration>
-                            <skip>${dpi-svil.keytool.skip}</skip>
-                            <keystore>${basedir}/dicom_tls/dpi-svil/${dpi-svil.keytool.importCertificate.keystore}</keystore>
-                            <storepass>${dpi-svil.keytool.importCertificate.storepass}</storepass>
-                            <storetype>${dpi-svil.keytool.importCertificate.storetype}</storetype>
-                            <keypass>${dpi-svil.keytool.importCertificate.keypass}</keypass>
-                            <alias>${dpi-svil.keytool.importCertificate.alias}</alias>
-                            <file>src/main/resources/dicom_tls/svil/${dpi-svil.keytool.importCertificate.file}</file>
-                            <trustcacerts>${dpi-svil.keytool.importCertificate.trustcacerts}</trustcacerts>
-                            <verbose>${dpi-svil.keytool.importCertificate.verbose}</verbose> 
-                            <noprompt>${dpi-svil.keytool.importCertificate.noprompt}</noprompt>         
-                        </configuration> 
-                    </execution>
-                    
-                    <execution>
-                        <id>keystore-snap</id>
+                        <id>keystore-example_test</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>clean</goal>
@@ -821,95 +166,92 @@
                             <goal>exportCertificate</goal>
                         </goals>
                         <configuration>            
-                            <skip>${dpi-snap.keytool.skip}</skip>
-                            <keystore>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.generateKeyPair.keystore}</keystore>
-                            <storepass>${dpi-snap.keytool.generateKeyPair.storepass}</storepass>
-                            <storetype>${dpi-snap.keytool.generateKeyPair.storetype}</storetype>
-                            <keypass>${dpi-snap.keytool.generateKeyPair.keypass}</keypass>
-                            <alias>${dpi-snap.keytool.generateKeyPair.alias}</alias>
-                            <dname>${dpi-snap.keytool.generateKeyPair.dname}</dname>
-                            <sigalg>${dpi-snap.keytool.generateKeyPair.sigalg}</sigalg>
-                            <validity>${dpi-snap.keytool.generateKeyPair.validity}</validity>
-                            <keyalg>${dpi-snap.keytool.generateKeyPair.keyalg}</keyalg>
-                            <keysize>${dpi-snap.keytool.generateKeyPair.keysize}</keysize>
-                            <file>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.exportCertificate.file}</file>
-                            <rfc>${dpi-snap.keytool.exportCertificate.rfc}</rfc>
-                            <verbose>${dpi-snap.keytool.generateKeyPair.verbose}</verbose> 
-                            <noprompt>${dpi-snap.keytool.generateKeyPair.noprompt}</noprompt>
-                        </configuration>
-                    </execution>       
-                    <execution>
-                        <id>truststore-snap</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>importCertificate</goal>
-                        </goals>
-                        <configuration>
-                            <skip>${dpi-snap.keytool.skip}</skip>
-                            <keystore>${basedir}/dicom_tls/dpi-snap/${dpi-snap.keytool.importCertificate.keystore}</keystore>
-                            <storepass>${dpi-snap.keytool.importCertificate.storepass}</storepass>
-                            <storetype>${dpi-snap.keytool.importCertificate.storetype}</storetype>
-                            <keypass>${dpi-snap.keytool.importCertificate.keypass}</keypass>
-                            <alias>${dpi-snap.keytool.importCertificate.alias}</alias>
-                            <file>src/main/resources/dicom_tls/snap/${dpi-snap.keytool.importCertificate.file}</file>
-                            <trustcacerts>${dpi-snap.keytool.importCertificate.trustcacerts}</trustcacerts>
-                            <verbose>${dpi-snap.keytool.importCertificate.verbose}</verbose> 
-                            <noprompt>${dpi-snap.keytool.importCertificate.noprompt}</noprompt>
-                        </configuration> 
-                    </execution>
-                    
-                    <execution>
-                        <id>keystore-auslbo_prod</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>clean</goal>
-                            <goal>generateKeyPair</goal>
-                            <goal>exportCertificate</goal>
-                        </goals>
-                        <configuration>            
-                            <skip>${dpi-auslbo_prod.keytool.skip}</skip>
-                            <keystore>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.generateKeyPair.keystore}</keystore>
-                            <storepass>${dpi-auslbo_prod.keytool.generateKeyPair.storepass}</storepass>
-                            <storetype>${dpi-auslbo_prod.keytool.generateKeyPair.storetype}</storetype>
-                            <keypass>${dpi-auslbo_prod.keytool.generateKeyPair.keypass}</keypass>
-                            <alias>${dpi-auslbo_prod.keytool.generateKeyPair.alias}</alias>
-                            <dname>${dpi-auslbo_prod.keytool.generateKeyPair.dname}</dname>
-                            <sigalg>${dpi-auslbo_prod.keytool.generateKeyPair.sigalg}</sigalg>
-                            <validity>${dpi-auslbo_prod.keytool.generateKeyPair.validity}</validity>
-                            <keyalg>${dpi-auslbo_prod.keytool.generateKeyPair.keyalg}</keyalg>
-                            <keysize>${dpi-auslbo_prod.keytool.generateKeyPair.keysize}</keysize>
-                            <file>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.exportCertificate.file}</file>
-                            <rfc>${dpi-auslbo_prod.keytool.exportCertificate.rfc}</rfc>
-                            <verbose>${dpi-auslbo_prod.keytool.generateKeyPair.verbose}</verbose> 
-                            <noprompt>${dpi-auslbo_prod.keytool.generateKeyPair.noprompt}</noprompt>
+                            <skip>${dpi-example_test.keytool.skip}</skip>
+                            <keystore>${basedir}/dicom_tls/dpi-example_test/${dpi-example_test.keytool.generateKeyPair.keystore}</keystore>
+                            <storepass>${dpi-example_test.keytool.generateKeyPair.storepass}</storepass>
+                            <storetype>${dpi-example_test.keytool.generateKeyPair.storetype}</storetype>
+                            <keypass>${dpi-example_test.keytool.generateKeyPair.keypass}</keypass>
+                            <alias>${dpi-example_test.keytool.generateKeyPair.alias}</alias>
+                            <dname>${dpi-example_test.keytool.generateKeyPair.dname}</dname>
+                            <sigalg>${dpi-example_test.keytool.generateKeyPair.sigalg}</sigalg>
+                            <validity>${dpi-example_test.keytool.generateKeyPair.validity}</validity>
+                            <keyalg>${dpi-example_test.keytool.generateKeyPair.keyalg}</keyalg>
+                            <keysize>${dpi-example_test.keytool.generateKeyPair.keysize}</keysize>
+                            <file>${basedir}/dicom_tls/dpi-example_test/${dpi-example_test.keytool.exportCertificate.file}</file>
+                            <rfc>${dpi-example_test.keytool.exportCertificate.rfc}</rfc>
+                            <verbose>${dpi-example_test.keytool.generateKeyPair.verbose}</verbose>
+                            <noprompt>${dpi-example_test.keytool.generateKeyPair.noprompt}</noprompt>
                         </configuration>
                     </execution>      
                     <execution>
-                        <id>truststore-auslbo_prod</id>
+                        <id>truststore-example_test</id>
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>clean</goal>
                             <goal>importCertificate</goal>
                         </goals>
                         <configuration>
-                            <skip>${dpi-auslbo_prod.keytool.skip}</skip>
-                            <keystore>${basedir}/dicom_tls/dpi-auslbo_prod/${dpi-auslbo_prod.keytool.importCertificate.keystore}</keystore>
-                            <storepass>${dpi-auslbo_prod.keytool.importCertificate.storepass}</storepass>
-                            <storetype>${dpi-auslbo_prod.keytool.importCertificate.storetype}</storetype>
-                            <keypass>${dpi-auslbo_prod.keytool.importCertificate.keypass}</keypass>
-                            <alias>${dpi-auslbo_prod.keytool.importCertificate.alias}</alias>
-                            <file>src/main/resources/dicom_tls/auslbo_prod/${dpi-auslbo_prod.keytool.importCertificate.file}</file>
-                            <trustcacerts>${dpi-auslbo_prod.keytool.importCertificate.trustcacerts}</trustcacerts>
-                            <verbose>${dpi-auslbo_prod.keytool.importCertificate.verbose}</verbose> 
-                            <noprompt>${dpi-auslbo_prod.keytool.importCertificate.noprompt}</noprompt>  
+                            <skip>${dpi-example_test.keytool.skip}</skip>
+                            <keystore>${basedir}/dicom_tls/dpi-example_test/${dpi-example_test.keytool.importCertificate.keystore}</keystore>
+                            <storepass>${dpi-example_test.keytool.importCertificate.storepass}</storepass>
+                            <storetype>${dpi-example_test.keytool.importCertificate.storetype}</storetype>
+                            <keypass>${dpi-example_test.keytool.importCertificate.keypass}</keypass>
+                            <alias>${dpi-example_test.keytool.importCertificate.alias}</alias>
+                            <file>src/main/resources/dicom_tls/test/${dpi-example_test.keytool.importCertificate.file}</file>
+                            <trustcacerts>${dpi-example_test.keytool.importCertificate.trustcacerts}</trustcacerts>
+                            <verbose>${dpi-example_test.keytool.importCertificate.verbose}</verbose>
+                            <noprompt>${dpi-example_test.keytool.importCertificate.noprompt}</noprompt>
                         </configuration> 
+                    </execution>
+                    <execution>
+                        <id>keystore-example_prod</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>generateKeyPair</goal>
+                            <goal>exportCertificate</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${dpi-example_prod.keytool.skip}</skip>
+                            <keystore>${basedir}/dicom_tls/dpi-example_prod/${dpi-example_prod.keytool.generateKeyPair.keystore}</keystore>
+                            <storepass>${dpi-example_prod.keytool.generateKeyPair.storepass}</storepass>
+                            <storetype>${dpi-example_prod.keytool.generateKeyPair.storetype}</storetype>
+                            <keypass>${dpi-example_prod.keytool.generateKeyPair.keypass}</keypass>
+                            <alias>${dpi-example_prod.keytool.generateKeyPair.alias}</alias>
+                            <dname>${dpi-example_prod.keytool.generateKeyPair.dname}</dname>
+                            <sigalg>${dpi-example_prod.keytool.generateKeyPair.sigalg}</sigalg>
+                            <validity>${dpi-example_prod.keytool.generateKeyPair.validity}</validity>
+                            <keyalg>${dpi-example_prod.keytool.generateKeyPair.keyalg}</keyalg>
+                            <keysize>${dpi-example_prod.keytool.generateKeyPair.keysize}</keysize>
+                            <file>${basedir}/dicom_tls/dpi-example_prod/${dpi-example_prod.keytool.exportCertificate.file}</file>
+                            <rfc>${dpi-example_prod.keytool.exportCertificate.rfc}</rfc>
+                            <verbose>${dpi-example_prod.keytool.generateKeyPair.verbose}</verbose>
+                            <noprompt>${dpi-example_prod.keytool.generateKeyPair.noprompt}</noprompt>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>truststore-example_prod</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>clean</goal>
+                            <goal>importCertificate</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${dpi-example_prod.keytool.skip}</skip>
+                            <keystore>${basedir}/dicom_tls/dpi-example_prod/${dpi-example_prod.keytool.importCertificate.keystore}</keystore>
+                            <storepass>${dpi-example_prod.keytool.importCertificate.storepass}</storepass>
+                            <storetype>${dpi-example_prod.keytool.importCertificate.storetype}</storetype>
+                            <keypass>${dpi-example_prod.keytool.importCertificate.keypass}</keypass>
+                            <alias>${dpi-example_prod.keytool.importCertificate.alias}</alias>
+                            <file>src/main/resources/dicom_tls/prod/${dpi-example_prod.keytool.importCertificate.file}</file>
+                            <trustcacerts>${dpi-example_prod.keytool.importCertificate.trustcacerts}</trustcacerts>
+                            <verbose>${dpi-example_prod.keytool.importCertificate.verbose}</verbose>
+                            <noprompt>${dpi-example_prod.keytool.importCertificate.noprompt}</noprompt>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
             <!-- end MEV#30394 -->
         </plugins>
     </build>
-
-
 </project>
