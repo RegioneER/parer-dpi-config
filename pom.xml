@@ -84,7 +84,7 @@
                                 </resource>
                             </resources>
                             <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
+                                <filter>${basedir}/filters/template.properties</filter>
                                 <filter>${basedir}/filters/example_dicom_prod/dpi-example_dicom.properties</filter>
                             </filters>
                         </configuration>
@@ -126,7 +126,7 @@
                                 </resource>
                             </resources>
                             <filters><!-- VINCE L'ULTIMO -->
-                                <filter>${basedir}/filters/default.properties</filter>
+                                <filter>${basedir}/filters/template.properties</filter>
                                 <filter>${basedir}/filters/example_dicom_test/dpi-example_dicom.properties</filter>
                             </filters>
                         </configuration>
