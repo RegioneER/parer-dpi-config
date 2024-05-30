@@ -13,14 +13,14 @@
     </parent>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/RegioneER/parer-dpi.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-dpi-config.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
         <repository>
           <id>github</id>
-          <url>https://maven.pkg.github.com/RegioneER/parer-dpi</url>
+          <url>https://maven.pkg.github.com/RegioneER/parer-dpi-config</url>
         </repository>      
     </distributionManagement>
 
