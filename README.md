@@ -12,13 +12,13 @@ Progetto relativo alle generazione delle cofigurazioni standard suddivise per am
 
 Il seguente progetto viene creato per esternalizzare le configurazioni, per singolo ambiente, dell'applicazione DPI, nello specifico il progetto viene creato a partire dalla configurazioni alla versione **2.6.0** del DPI che sono quindi le ultime ad essere presenti all'interno dell'applicativo stesso.
 
-## Guida alle configurazioni  
+## Guida alle configurazioni
 
-Nella directory `conf` vengono generate le configurazioni per le diverse installazioni di DPI per ogni ambiente che saranno predisposte opportunamente secondo le istruzioni presenti nel README ufficiale del progetto DPI. Per semplificare e autoatizzare il processo di  generazione delle configurazioni è possibile attivare una pipeline CI/CD.
+Nella directory `conf`, vengono generate automaticamente dal modello CI/CD, le configurazioni per le diverse installazioni di DPI per ogni ambiente, che saranno predisposte opportunamente secondo le istruzioni presenti nel README ufficiale del progetto DPI.
 
-## Versionamento dpi-config e dpi  
+## Versionamento dpi-config e dpi
 
-Il versionamento del progetto **dpi-config** segue direttamente quello dell'applicazione DPI, ossia, ad ogni nuovo versionamento di quest'ultimo seguirà anche il versionamento di questo progetto (esempio se creata la versione 3.0.0 di dpi si dovrà anche creare la relativa versione di dpi-config 3.0.0 indipendentemente se quest'ultimo è stato modificato o meno). 
+Il versionamento del progetto **dpi-config** segue direttamente quello dell'applicazione DPI, ossia, ad ogni nuovo versionamento di quest'ultimo seguirà anche il versionamento di questo progetto (esempio se creata la versione 3.0.0 di dpi si dovrà anche creare la relativa versione di dpi-config 3.0.0 indipendentemente se quest'ultimo è stato modificato o meno).
 Questa gestione delle versioni è utile per associare ad ogni nuova versione applicativa di dpi anche le relative configurazioni.
 In caso di **sola modifica di dpi-config** non seguita quindi da modifiche applicative su **dpi**, si stabilisce la generazione di una nuova versione di **dpi-config** applicando un quarto numero alla versione da creare (esempio dpi alla versione 3.0.0 e dpi-config 3.0.0, in caso di sola modifica a dpi-config si crea la versione 3.0.0.**1**).
 
@@ -32,9 +32,9 @@ Esempio 2 (modifica esclusiva a dpi-config)
 Si crea la versione **2.6.0.1** di dpi-config che quindi è relativa alla versione **2.6.0** di dpi ma si evidenziano le sole modifiche alle configurazioni compatibili a partire da questa versione.
 
 
-## Modifica delle configurazioni  
+## Modifica delle configurazioni
 
-La directory su cui agire è `filters` su cui sono presenti i file statici con relativi placeholder, trattandosi di un progetto maven che utilizza l'apposito plugin, è necessario eventualmente agire sui file in cui è già presente una logica di "filtro" e, nell'eventualità le future evolutive dell'applicazione DPI impongano nuovi file, di modificare anche il pom.xml di progetto. Per automatizzare la generazione dell'artifact finale è possibile predisporre una apposita implementazione su pipeline CI/CD che produca il "pacchetto" contenente le configurazioni attraverso il goal maven "package".
+La directory su cui agire è `filters` su cui sono presenti i file statici con relativi placeholder, trattandosi di un progetto maven che utilizza l'apposito plugin, è necessario eventualmente agire sui file in cui è già presente una logica di "filtro" e, nell'eventualità le future evolutive dell'applicazione DPI impongano nuovi file, di modificare anche il pom.xml di progetto. Per la generazione dell'artifact finale è stata predisposta una apposita implementazione su pipeline Gitlab che produce il "pacchetto" attraverso il goal maven "package".
 
 
 # Supporto
