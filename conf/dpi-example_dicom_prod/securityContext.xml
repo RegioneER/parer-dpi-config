@@ -12,7 +12,7 @@
     <!-- samlRelayState DEVE essere definito prima dell'import che lo usa altrimenti non funziona nulla! -->
     <!-- Serve per far funzionare l'integrazione con FEDERA -->
     <bean id="spEntityId" class="java.lang.String">
-        <constructor-arg value="https://auslromagnafo.regione.emilia-romagna.it/dpi"/>
+        <constructor-arg value="https://dpi-example_dicom_prod.example.it/dpi"/>
     </bean>
     <!-- Estrae dall'entityId la parte dell'url del server e della porta escludendo l'ultimo slash -->
     <bean id="serverUrl" class="java.lang.String">
@@ -42,10 +42,10 @@
     <!-- Central storage of cryptographic keys -->
     <bean id="keyManager" class="org.springframework.security.saml.key.JKSKeyManager">
         <constructor-arg value="file:///${catalina.base}/conf/dpi-${env}/samlKeystore.jks" />
-        <constructor-arg type="java.lang.String" value="ughoec7EithooTh9wethahWohbi4pa9h" />
+        <constructor-arg type="java.lang.String" value="passwd" />
         <constructor-arg>
             <map>
-                <entry key="dpi" value="ughoec7EithooTh9wethahWohbi4pa9h" />
+                <entry key="dpi" value="passwd" />
             </map>
         </constructor-arg>
         <constructor-arg type="java.lang.String" value="dpi" />
@@ -83,7 +83,7 @@
                             <!-- URL containing the metadata -->
                             <constructor-arg>
 								
-                                <value type="java.lang.String">https://sso-parer-pre.regione.emilia-romagna.it/auth/realms/Parer/federation/metadata</value>
+                                <value type="java.lang.String">https://prod.example.it/saceriam/federationMetadata</value>
                             </constructor-arg>
                             <!-- Timeout per la connessione durante una richiesta di metadati (in ms) -->
                             <constructor-arg>
@@ -97,7 +97,7 @@
                     </constructor-arg>
                     <constructor-arg>
                         <map>
-                            <entry key="https://auslromagnafo.regione.emilia-romagna.it/dpi">
+                            <entry key="https://dpi-example_dicom_prod.example.it/dpi">
                                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
                                     <property name="local" value="true" />
                                     <property name="alias" value="dpi" />
@@ -111,7 +111,7 @@
                                     <property name="idpDiscoveryEnabled" value="false" />
                                 </bean>
                             </entry>
-                            <entry key="https://sso-parer-pre.regione.emilia-romagna.it/auth/realms/Parer">
+                            <entry key="https://sso-prod.example.it/auth/realms/Parer">
                                 <bean class="org.springframework.security.saml.metadata.ExtendedMetadata"/>
                             </entry>
                         </map>
@@ -121,9 +121,9 @@
             </list>
         </constructor-arg>
         <!-- OPTIONAL used when one of the metadata files contains information about this service provider -->
-        <property name="hostedSPName" value="https://auslromagnafo.regione.emilia-romagna.it/dpi" />
+        <property name="hostedSPName" value="https://dpi-example_dicom_prod.example.it/dpi" />
         <!-- OPTIONAL property: can tell the system which IDP should be used for authenticating user by default. -->
-        <property name="defaultIDP" value="https://sso-parer-pre.regione.emilia-romagna.it/auth/realms/Parer" />
+        <property name="defaultIDP" value="https://sso-prod.example.it/auth/realms/Parer" />
         <!-- Intervallo di refresh dei metadati -->
         <property name="refreshCheckInterval" value="600000"/>
     </bean>
