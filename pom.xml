@@ -12,22 +12,28 @@
         <version>5.2.1</version>
     </parent>
 
-    <scm>
+<scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-dpi-config.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
-    <distributionManagement>
+<distributionManagement>
         <repository>
           <id>github</id>
           <url>https://maven.pkg.github.com/RegioneER/parer-dpi-config</url>
         </repository>      
     </distributionManagement>
 
-    <repositories>
+<repositories>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>            
+        </repository>            
+	</repositories>
+
+    <repositories>
+        <repository>
+            <id>github</id>
         </repository>            
 	</repositories>
    
