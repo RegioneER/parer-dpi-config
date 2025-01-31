@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>dpi-config</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>4.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dpi Config</name>
     <description>Progetto DPI Config</description>
@@ -19,18 +19,18 @@
 
     <distributionManagement>
         <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/RegioneER/parer-dpi-config</url>
-        </repository>      
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-dpi-config</url>
+        </repository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>            
-        </repository>            
-	</repositories>
-   
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
+        </repository>
+    </repositories>
+
 
     <properties>
         <maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>

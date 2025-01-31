@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Jan 30 12:40:47 CET 2025
+org.eclipse.osgi-3.16.300.jar>parer-repositories-mirror=
+org.eclipse.osgi-3.16.300.pom>parer-repositories-mirror=
