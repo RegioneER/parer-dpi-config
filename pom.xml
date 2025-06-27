@@ -31,12 +31,6 @@
         </repository>
     </repositories>
 
-    <repositories>
-        <repository>
-            <id>github</id>
-        </repository>
-    </repositories>
-
 
     <properties>
         <maven.build.timestamp.format>dd-MM-yyyy HH:mm</maven.build.timestamp.format>
